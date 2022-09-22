@@ -1,11 +1,12 @@
 package services.map;
 
 import model.CarOwner;
+import services.CarOwnerService;
 import services.CrudService;
 
 import java.util.Set;
 
-public class CarOwnerMap extends AbstractMapService<CarOwner, Long> implements CrudService<CarOwner, Long> {
+public class CarOwnerMap extends AbstractMapService<CarOwner, Long> implements CarOwnerService {
     @Override
     public CarOwner save(CarOwner object) {
         return super.save(object.getId(), object);
@@ -29,5 +30,10 @@ public class CarOwnerMap extends AbstractMapService<CarOwner, Long> implements C
     @Override
     public void delete(CarOwner object) {
         super.delete(object);
+    }
+
+    @Override
+    public CarOwner findByLastName(String lastName) {
+        return null;
     }
 }

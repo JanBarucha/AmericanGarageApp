@@ -1,11 +1,12 @@
 package services.map;
 
 import model.Car;
+import services.CarService;
 import services.CrudService;
 
 import java.util.Set;
 
-public class CarServiceMap extends AbstractMapService<Car,Long> implements CrudService<Car, Long> {
+public class CarServiceMap extends AbstractMapService<Car,Long> implements CarService {
     @Override
     public Car save(Car object) {
         return super.save(object.getId(), object);

@@ -2,10 +2,11 @@ package services.map;
 
 import model.Mechanics;
 import services.CrudService;
+import services.MechanicsService;
 
 import java.util.Set;
 
-public class MechanicsServiceMap extends AbstractMapService<Mechanics, Long> implements CrudService<Mechanics, Long> {
+public class MechanicsServiceMap extends AbstractMapService<Mechanics, Long> implements MechanicsService {
     @Override
     public Mechanics save(Mechanics object) {
         return super.save(object.getId(), object);
