@@ -1,6 +1,4 @@
-package services;
-
-import model.Car;
+package GarageApp.model.services;
 
 import java.util.Set;
 

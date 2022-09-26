@@ -1,7 +1,6 @@
-package services;
+package GarageApp.model.services;
 
-import model.Car;
-import model.Mechanics;
+import GarageApp.model.Car;
 
 public interface CarService extends CrudService<Car, Long> {
 

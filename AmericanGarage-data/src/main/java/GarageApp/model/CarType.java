@@ -1,4 +1,4 @@
-package model;
+package GarageApp.model;
 
 public class CarType {
 

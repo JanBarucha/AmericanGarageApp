@@ -1,15 +1,15 @@
-package services.map;
+package GarageApp.model.services.map;
 
-import model.CarOwner;
-import services.CarOwnerService;
-import services.CrudService;
+import GarageApp.model.CarOwner;
+import org.springframework.stereotype.Service;
+import GarageApp.model.services.CarOwnerService;
 
 import java.util.Set;
-
+@Service
 public class CarOwnerMap extends AbstractMapService<CarOwner, Long> implements CarOwnerService {
     @Override
     public CarOwner save(CarOwner object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

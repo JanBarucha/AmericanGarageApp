@@ -1,10 +1,9 @@
-package services;
+package GarageApp.model.services;
 
-import model.Car;
-import model.CarOwner;
+import GarageApp.model.CarOwner;
+import org.springframework.stereotype.Service;
 
-import java.util.Set;
-
+@Service
 public interface CarOwnerService extends CrudService<CarOwner, Long>{
 
     CarOwner findByLastName(String lastName);

@@ -5,7 +5,23 @@
     <title>List of working Mechanics</title>
 </head>
 <body>
-<h1 th:text="'List of Mechanics'"> List of Mechanics...</h1>
+<h1 th:text="'List of Mechanics'">List of car owners</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mech : ${mechanics}">
+        <td th:text="${mech?.id}">1</td>
+        <td th:text="${mech?.firstName}">Janks</td>
+        <td th:text="${mech?.lastName}">Kowalks</td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>

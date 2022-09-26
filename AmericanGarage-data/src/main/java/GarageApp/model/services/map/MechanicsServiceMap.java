@@ -1,15 +1,15 @@
-package services.map;
+package GarageApp.model.services.map;
 
-import model.Mechanics;
-import services.CrudService;
-import services.MechanicsService;
+import GarageApp.model.Mechanics;
+import GarageApp.model.services.MechanicsService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class MechanicsServiceMap extends AbstractMapService<Mechanics, Long> implements MechanicsService {
     @Override
     public Mechanics save(Mechanics object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
